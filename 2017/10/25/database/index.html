@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://richardcsb.github.io/Richardcsb/2017/10/25/database/index.html">
 <meta property="og:site_name" content="Bochexf的博客">
 <meta property="og:description" content="ubuntu install MySql    1apt-get install mysql-server mysql-client test success1mysql -u root -p Upstream URL">
-<meta property="og:updated_time" content="2017-10-25T06:10:48.775Z">
+<meta property="og:updated_time" content="2017-10-28T10:09:16.675Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mariadb">
 <meta name="twitter:description" content="ubuntu install MySql    1apt-get install mysql-server mysql-client test success1mysql -u root -p Upstream URL">
@@ -196,8 +196,8 @@
 <p>Create databases for examp samp_db<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">create</span> <span class="keyword">databases</span> samp_db <span class="built_in">character</span> <span class="keyword">set</span> gbk;</div></pre></td></tr></table></figure></p>
 <p>When you log into mysql, you need specify the database to operate<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">use</span> students</div></pre></td></tr></table></figure></p>
 <p>Make an examp of students table ,there are <strong>id</strong>,<strong>name</strong>,<strong>sex</strong> ,<strong>age</strong>,<strong>tel</strong> <strong>:</strong><br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">create</span> <span class="keyword">table</span> students</div><div class="line">（</div><div class="line">      <span class="keyword">id</span> <span class="built_in">int</span> <span class="keyword">unsigned</span> <span class="keyword">not</span> <span class="literal">null</span> auto_increment primary <span class="keyword">key</span>,</div><div class="line">      <span class="keyword">name</span> <span class="built_in">char</span>(<span class="number">8</span>) <span class="keyword">not</span> <span class="literal">null</span>,</div><div class="line">      sex <span class="built_in">char</span>(<span class="number">4</span>) <span class="keyword">not</span> <span class="literal">null</span>,</div><div class="line">      age tinyint <span class="keyword">unsigned</span> <span class="keyword">not</span> <span class="literal">null</span>,</div><div class="line">      tel <span class="built_in">char</span>(<span class="number">13</span>) <span class="literal">null</span> <span class="keyword">default</span> “-“</div><div class="line">);</div></pre></td></tr></table></figure></p>
-<hr>
-<blockquote>
+<p>添加用户  </p>
+<h2 id="add-user"><a href="#add-user" class="headerlink" title="add user"></a><a href="https://dev.mysql.com/doc/refman/5.7/en/adding-users.html" target="_blank" rel="external">add user</a></h2><blockquote>
 <p>对于一些较长的语句在命令提示符下可能容易输错, 因此我们可以通过任何文本编辑器将语句输入好后保存为 createtable.sql 的文件中, 通过命令提示符下的文件重定向执行执行该脚本。</p>
 </blockquote>
 <p>打开命令提示符, 输入: mysql -D samp_db -u root -p &lt; createtable.sql</p>
