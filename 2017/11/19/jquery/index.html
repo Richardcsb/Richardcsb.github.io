@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://richardcsb.github.io/Richardcsb">
-  <title>Tag: hexo | Bochexf的博客</title>
+  <title>jQuery | Bochexf的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Bochexf的博客">
-<meta property="og:url" content="http://richardcsb.github.io/Richardcsb/tags/hexo/index.html">
+  <meta name="description" content="Let`s go!&amp;lt;script&amp;gt; $(document).ready(function(){    // 开始写 jQuery 代码... }); &amp;amp;   $(function(){    // 开始写 jQuery 代码... }); &amp;lt;/script&amp;gt;">
+<meta name="keywords" content="jQuery">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery">
+<meta property="og:url" content="http://richardcsb.github.io/Richardcsb/2017/11/19/jquery/index.html">
 <meta property="og:site_name" content="Bochexf的博客">
-<meta property="og:description" content="description">
+<meta property="og:description" content="Let`s go!&amp;lt;script&amp;gt; $(document).ready(function(){    // 开始写 jQuery 代码... }); &amp;amp;   $(function(){    // 开始写 jQuery 代码... }); &amp;lt;/script&amp;gt;">
+<meta property="og:updated_time" content="2017-11-19T02:55:46.280Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Bochexf的博客">
-<meta name="twitter:description" content="description">
+<meta name="twitter:title" content="jQuery">
+<meta name="twitter:description" content="Let`s go!&amp;lt;script&amp;gt; $(document).ready(function(){    // 开始写 jQuery 代码... }); &amp;amp;   $(function(){    // 开始写 jQuery 代码... }); &amp;lt;/script&amp;gt;">
   
     <link rel="alternative" href="/atom.xml" title="Bochexf的博客" type="application/atom+xml">
   
@@ -152,64 +154,357 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-jquery" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/09/deploy_blog/" class="archive-article-date">
-  	<time datetime="2017-09-09T08:57:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-09</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/09/deploy_blog/">My First Blog</a>
+    <h1 class="article-title" itemprop="name">
+      jQuery
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/11/19/jquery/" class="archive-article-date">
+  	<time datetime="2017-11-19T02:43:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="Let-s-go"><a href="#Let-s-go" class="headerlink" title="Let`s go!"></a>Let`s go!</h4><pre><code>&lt;script&gt;
+$(document).ready(function(){
+   // 开始写 jQuery 代码...
+});
+&amp;  
+$(function(){
+   // 开始写 jQuery 代码...
+});
+&lt;/script&gt;
+</code></pre><a id="more"></a>  
+<h4 id="jQuery-AJAX"><a href="#jQuery-AJAX" class="headerlink" title="jQuery AJAX"></a>jQuery AJAX</h4><h5 id="jQuery-load-方法"><a href="#jQuery-load-方法" class="headerlink" title="jQuery load() 方法"></a>jQuery load() 方法</h5><p>把文件 “demo_test.txt” 的内容加载到指定的 <div> 元素中</div></p>
+<pre><code>$(&quot;#div1&quot;).load(&quot;demo_test.txt&quot;);
+</code></pre><p>把 “demo_test.txt” 文件中 id=”p1” 的元素的内容，加载到指定的 <div> 元素中</div></p>
+<pre><code>$(&quot;#div1&quot;).load(&quot;demo_test.txt #p1&quot;);
+</code></pre><h5 id="AJAX-get-和-post-方法"><a href="#AJAX-get-和-post-方法" class="headerlink" title="AJAX get() 和 post() 方法"></a>AJAX get() 和 post() 方法</h5><p>使用 $.get() 方法从服务器上的一个文件中取回数据  </p>
+<pre><code>$(&quot;button&quot;).click(function(){
+  $.get(&quot;demo_test.php&quot;,function(data,status){
+    alert(&quot;数据: &quot; + data + &quot;\n状态: &quot; + status);
+  });
+});
+</code></pre><p>用 $.post() 连同请求一起发送数据</p>
+<pre><code>$(&quot;button&quot;).click(function(){
+    $.post(&quot;/try/ajax/demo_test_post.php&quot;,
+    {
+        name:&quot;菜鸟教程&quot;,
+        url:&quot;http://www.runoob.com&quot;
+    },
+        function(data,status){
+        alert(&quot;数据: \n&quot; + data + &quot;\n状态: &quot; + status);
+    });
+});
+</code></pre><h4 id="查找过滤"><a href="#查找过滤" class="headerlink" title="查找过滤"></a>查找过滤</h4><pre><code>&lt;!-- HTML结构 --&gt;
+&lt;ul class=&quot;lang&quot;&gt;
+    &lt;li class=&quot;js dy&quot;&gt;JavaScript&lt;/li&gt;
+    &lt;li class=&quot;dy&quot;&gt;Python&lt;/li&gt;
+    &lt;li id=&quot;swift&quot;&gt;Swift&lt;/li&gt;
+    &lt;li class=&quot;dy&quot;&gt;Scheme&lt;/li&gt;
+    &lt;li name=&quot;haskell&quot;&gt;Haskell&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre><p>根据上面代码用find()查找：<br>var ul = $(‘ul.lang’); // 获得&lt; ul &gt;<br>var dy = ul.find(‘.dy’); // 获得JavaScript, Python, Scheme<br>var swf = ul.find(‘#swift’); // 获得Swift<br>var hsk = ul.find(‘[name=haskell]’); // 获得Haskell  </p>
+<p>如果要从当前节点开始向上查找，使用parent()方法：<br>var swf = $(‘#swift’); // 获得Swift<br>var parent = swf.parent(); // 获得Swift的上层节点&lt; ul &gt;<br>var a = swf.parent(‘.red’); // 获得Swift的上层节点&lt; ul &gt;，同时传入过滤条件。如果ul不符合条件，返回空jQuery对象   </p>
+<p>对于位于同一层级的节点，可以通过next()和prev()方法，例如：<br>var swift = $(‘#swift’);<br>swift.next(); // Scheme<br>swift.next(‘[name=haskell]’); // 空的jQuery对象，因为Swift的下一个元素Scheme不符合条件[name=haskell]<br>swift.prev(); // Python<br>swift.prev(‘.dy’); // Python，因为Python同时符合过滤器条件.dy  </p>
+<p>filter()方法可以过滤掉不符合选择器条件的节点：<br>var langs = $(‘ul.lang li’); // 拿到JavaScript, Python, Swift, Scheme和Haskell<br>var a = langs.filter(‘.dy’); // 拿到JavaScript, Python, Scheme  </p>
+<p>或者传入一个函数，要特别注意函数内部的this被绑定为DOM对象，不是jQuery对象：  </p>
+<pre><code>var langs = $(&apos;ul.lang li&apos;); // 拿到JavaScript, Python, Swift, Scheme和Haskell
+langs.filter(function () {
+    return this.innerHTML.indexOf(&apos;S&apos;) === 0; // 返回S开头的节点
+}); // 拿到Swift, Scheme
+</code></pre><p>map()方法把一个jQuery对象包含的若干DOM节点转化为其他对象：  </p>
+<pre><code>var langs = $(&apos;ul.lang li&apos;);//拿到JavaScript,Python,Swift,Scheme和Haskell
+var arr = langs.map(function(){
+    return this.innerHTML;
+}).get();//用get()拿到包含string的Array:[&apos;JavaScript&apos;, &apos;Python&apos;, &apos;Swift&apos;, &apos;Scheme&apos;, &apos;Haskell&apos;]
+</code></pre><p>此外，一个jQuery对象如果包含了不止一个DOM节点，first()、last()和slice()方法可以返回一个新的jQuery对象，把不需要的DOM节点去掉：<br>var langs = $(‘ul.lang li’); // 拿到JavaScript, Python, Swift, Scheme和Haskell<br>var js = langs.first(); // JavaScript，相当于$(‘ul.lang li:first-child’)<br>var haskell = langs.last(); // Haskell, 相当于$(‘ul.lang li:last-child’)<br>var sub = langs.slice(2, 4); // Swift, Scheme, 参数和数组的slice()方法一致  </p>
+<h3 id="操作DOM"><a href="#操作DOM" class="headerlink" title="操作DOM"></a>操作DOM</h3><h4 id="设置内容text-html-val"><a href="#设置内容text-html-val" class="headerlink" title="设置内容text(),html(),val()"></a>设置内容text(),html(),val()</h4><h6 id="通过-text-、html-以及-val-方法来设置内容："><a href="#通过-text-、html-以及-val-方法来设置内容：" class="headerlink" title="通过 text()、html() 以及 val() 方法来设置内容："></a>通过 text()、html() 以及 val() 方法来设置内容：</h6><pre><code>$(document).ready(function(){
+  $(&quot;#btn1&quot;).click(function(){
+    $(&quot;#test1&quot;).text(&quot;Hello world!&quot;);
+  });
+  $(&quot;#btn2&quot;).click(function(){
+    $(&quot;#test2&quot;).html(&quot;&lt;b&gt;Hello world!&lt;/b&gt;&quot;);
+  });
+  $(&quot;#btn3&quot;).click(function(){
+    $(&quot;#test3&quot;).val(&quot;RUNOOB&quot;);
+  });
+});
+</code></pre><h6 id="带有回调函数的-text-和-html-："><a href="#带有回调函数的-text-和-html-：" class="headerlink" title="带有回调函数的 text() 和 html()："></a>带有回调函数的 text() 和 html()：</h6><pre><code>$(&quot;#btn1&quot;).click(function(){
+    $(&quot;#test1&quot;).text(function(i,origText){
+        return &quot;旧文本: &quot; + origText + &quot; 新文本: Hello world! (index: &quot; + i + &quot;)&quot;;
+    });
+});
+
+$(&quot;#btn2&quot;).click(function(){
+    $(&quot;#test2&quot;).html(function(i,origText){
+        return &quot;旧 html: &quot; + origText + &quot; 新 html: Hello &lt;b&gt;world!&lt;/b&gt; (index: &quot; + i + &quot;)&quot;;
+    });
+});
+</code></pre><h6 id="改变（设置）链接中-href-属性的值："><a href="#改变（设置）链接中-href-属性的值：" class="headerlink" title="改变（设置）链接中 href 属性的值："></a>改变（设置）链接中 href 属性的值：</h6><pre><code>$(&quot;button&quot;).click(function(){
+  $(&quot;#runoob&quot;).attr(&quot;href&quot;,&quot;http://www.runoob.com/jquery&quot;);
+});
+&amp;
+$(&quot;button&quot;).click(function(){//同时设置href和title属性
+    $(&quot;#runoob&quot;).attr({
+        &quot;href&quot; : &quot;http://www.runoob.com/jquery&quot;,
+        &quot;title&quot; : &quot;jQuery 教程&quot;
+    });
+});
+</code></pre><pre><code>$(&quot;p&quot;).append(&quot;追加文本&quot;);
+</code></pre><pre><code>$(&quot;p&quot;).prepend(&quot;在开头追加文本&quot;);
+</code></pre><pre><code>$(&quot;#div1&quot;).remove();
+</code></pre><pre><code>$(&quot;#div1&quot;).empty();
+</code></pre><pre><code>$(&quot;p&quot;).remove(&quot;.italic&quot;);//删除 class=&quot;italic&quot; 的所有 &lt;p&gt; 元素
+</code></pre><h4 id="显示和隐藏DOM"><a href="#显示和隐藏DOM" class="headerlink" title="显示和隐藏DOM"></a>显示和隐藏DOM</h4><pre><code>var a = $(&apos;a[target=_blank]&apos;);
+a.hide(); // 隐藏
+a.show(); // 显示
+</code></pre><h4 id="修改CSS"><a href="#修改CSS" class="headerlink" title="修改CSS"></a>修改CSS</h4><h6 id="CSS方法"><a href="#CSS方法" class="headerlink" title="CSS方法"></a>CSS方法</h6><pre><code>$(&quot;p&quot;).css(&quot;background-color&quot;);//返回指定的 CSS 属性的值
+$(&quot;p&quot;).css(&quot;background-color&quot;,&quot;yellow&quot;);//为所有匹配元素设置 background-color 值
+$(&quot;p&quot;).css({&quot;background-color&quot;:&quot;yellow&quot;,&quot;font-size&quot;:&quot;200%&quot;});//为所有匹配元素设置 background-color 和 font-size
+$(&apos;#test-css li.dy&gt;span&apos;).css(&apos;background-color&apos;, &apos;#ffd351&apos;).css(&apos;color&apos;, &apos;red&apos;);
+</code></pre><p>jQuery对象的css()方法可以这么用：</p>
+<pre><code>var div = $(&apos;#test-div&apos;);
+div.css(&apos;color&apos;); // &apos;#000033&apos;, 获取CSS属性
+div.css(&apos;color&apos;, &apos;#336699&apos;); // 设置CSS属性
+div.css(&apos;color&apos;, &apos;&apos;); // 清除CSS属性
+</code></pre><p>为了和JavaScript保持一致，CSS属性可以用’background-color’和’backgroundColor’两种格式。     </p>
+<h6 id="CSS类"><a href="#CSS类" class="headerlink" title="CSS类"></a>CSS类</h6><pre><code>&lt;!-- CSS结构 --&gt;
+.important
+{
+        font-weight:bold;
+        font-size:xx-large;
+}
+
+.blue
+{
+        color:blue;
+}
+</code></pre><pre><code>$(&quot;button&quot;).click(function(){
+  $(&quot;h1,h2,p&quot;).addClass(&quot;blue&quot;);
+  $(&quot;div&quot;).addClass(&quot;important&quot;);
+});
+****
+$(&quot;button&quot;).click(function(){
+  $(&quot;body div:first&quot;).addClass(&quot;important blue&quot;);
+});
+***
+$(&quot;button&quot;).click(function(){
+  $(&quot;h1,h2,p&quot;).removeClass(&quot;blue&quot;);
+});
+****
+$(&quot;button&quot;).click(function(){
+  $(&quot;h1,h2,p&quot;).toggleClass(&quot;blue&quot;);
+});
+</code></pre><p>css()方法将作用于DOM节点的style属性，具有最高优先级。如果要修改class属性，可以用jQuery提供的下列方法：  </p>
+<pre><code>var div = $(&apos;#test-div&apos;);
+div.hasClass(&apos;highlight&apos;); // false， class是否包含highlight
+div.addClass(&apos;highlight&apos;); // 添加highlight这个class
+div.removeClass(&apos;highlight&apos;); // 删除highlight这个class
+</code></pre><h4 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h4><blockquote>
+<p>$(‘p’)//元素选择器，选择页面中所有 &lt; p >元素<br>$(‘#test’)//#id选择器<br>$(‘.class’)//.class选择器<br>$(‘[name=email]’)//按属性查找<br>$(‘input[name=email]’)//组合查找<br>$(‘tr.red’)//组合查找<br>$(‘p,div’)//多项选择器<br>$(‘ul.land li.lang-javascript’);//层级选择，查找ul.land下的li.land-javascript<br>$(‘form.test p input’); // 多层级选择在form表单选择被&lt; p &gt;包含的&lt; input &gt;<br>$(‘ul.lang li:first-child’); // 子选择器<br>$(‘ul.lang li:nth-child(2)’); // 子选择器，选出第N个元素，N从1开始<br>$(‘ul.lang li:nth-child(even)’); // 选出序号为偶数的元素<br>$(‘ul.lang li:nth-child(odd)’); // 选出序号为奇数的元素<br>$(‘div:visible’); // 所有可见的div<br>$(“*”)//选取所有元素<br>$(“this”)//选取当前html元素<br>$(“p.intro”)//选取class为intro的&lt; p &gt;元素<br>$(“p:first”)//选取第一个 &lt; p &gt; 元素<br>$(“ul li:first”)//选取第一个 &lt; ul &gt; 元素的第一个 &lt; li &gt; 元素<br>$(“[href]”)//选取带有 href 属性的元素<br>$(“a[target=’_blank’]”)//选取所有 target 属性值等于 “_blank” 的&lt; a &gt;元素<br>$(“:button”)//选取所有 type=”button” 的 &lt; input &gt; 元素 和 &lt; button &gt; 元素<br>$(“tr:even”)//选取偶数位置的 <tr> 元素<br>$(“tr:odd”)//选取奇数位置的 </tr><tr> 元素  </tr></p>
+</blockquote>
+<h4 id="jQuery-事件"><a href="#jQuery-事件" class="headerlink" title="jQuery 事件"></a>jQuery 事件</h4><p>click()  </p>
+<pre><code>$(&quot;p&quot;).click(function(){
+  $(this).hide();
+});
+</code></pre><p>dblclick()</p>
+<pre><code>$(&quot;p&quot;).dblclick(function(){
+  $(this).hide();
+});
+</code></pre><p>mouseenter()  </p>
+<pre><code>$(&quot;#p1&quot;).mouseenter(function(){
+    alert(&apos;您的鼠标移到了 id=&quot;p1&quot; 的元素上!&apos;);
+});
+</code></pre><p>mouseleave()</p>
+<pre><code>$(&quot;#p1&quot;).mouseleave(function(){
+    alert(&quot;再见，您的鼠标离开了该段落。&quot;);
+});
+</code></pre><p>mousedown()  </p>
+<pre><code>$(&quot;#p1&quot;).mousedown(function(){
+    alert(&quot;鼠标在该段落上按下！&quot;);
+});
+</code></pre><p>mouseup()</p>
+<pre><code>$(&quot;#p1&quot;).mouseup(function(){
+    alert(&quot;鼠标在段落上松开。&quot;);
+});
+</code></pre><p>hover()</p>
+<pre><code>$(&quot;#p1&quot;).hover(
+    function(){
+        alert(&quot;你进入了 p1!&quot;);
+    },
+    function(){
+        alert(&quot;拜拜! 现在你离开了 p1!&quot;);
+    }
+);
+</code></pre><p>focus()</p>
+<pre><code>$(&quot;input&quot;).focus(function(){
+  $(this).css(&quot;background-color&quot;,&quot;#cccccc&quot;);
+});
+</code></pre><p>blur()</p>
+<pre><code>$(&quot;input&quot;).blur(function(){
+  $(this).css(&quot;background-color&quot;,&quot;#ffffff&quot;);
+});
+</code></pre><h4 id="jQuery-效果"><a href="#jQuery-效果" class="headerlink" title="jQuery 效果"></a>jQuery 效果</h4><p><a href="http://www.runoob.com/jquery/jquery-fade.html" target="_blank" rel="external">淡入淡出</a></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/images/0913_2.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/images/0911_2.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">jQuery</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://richardcsb.github.io/Richardcsb/2017/11/19/jquery/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/11/11/shadowsocks/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">shadowsocks</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -232,9 +527,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
